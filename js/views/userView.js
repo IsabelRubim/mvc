@@ -1,15 +1,21 @@
 import { elements } from "./base.js";
 
-export const renderUser = (user) => {
+export const renderUser = ({
+  avatar_url,
+  html_url,
+  public_repos,
+  followers,
+  following,
+}) => {
   const markup = `
     <div class="profile-header">
-      <img src="${user.avatar_url}" alt="Avatar">
-      <a href="${user.html_url}" target="_blank">Visitar perfil</a>
+      <img src="${avatar_url}" alt="Avatar">
+      <a href="${html_url}" target="_blank">Visitar perfil</a>
     </div>   
     <ul class="profile-list">
-      <li>Repositórios: ${user.public_repos}</li>
-      <li>Seguidores: ${user.followers}</li>
-      <li>Seguindo: ${user.following}</li>
+      <li>Repositórios: ${public_repos}</li>
+      <li>Seguidores: ${followers}</li>
+      <li>Seguindo: ${following}</li>
     </ul> 
   `;
 

@@ -26,15 +26,15 @@ const controlSearch = async (event) => {
   try {
     const searched = elements.input.value;
 
-    state.searched = new User(searched);
+    state.user = new User(searched);
 
-    await state.searched.getUser();
+    await state.user.getUser();
 
     clearUI();
 
-    userView.renderUser(state.searched);
+    userView.renderUser(state.user);
 
-    await controlFavoriteRepositories(state.searched.starred_url);
+    await controlFavoriteRepositories(state.user.starred_url);
 
     elements.input.value = "";
   } catch (error) {

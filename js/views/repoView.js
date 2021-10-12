@@ -3,10 +3,10 @@ import { elements } from "./base.js";
 export const renderRepositories = (repositories) => {
   let markup = "";
 
-  repositories.forEach((repo) => {
+  repositories.forEach(({ html_url, name }) => {
     markup += `
-      <a href="${repo.html_url}" class="repo-url" target="_blank">
-        ${repo.name}
+      <a href="${html_url}" class="repo-url" target="_blank">
+        ${name}
       </a>
     `;
   });
