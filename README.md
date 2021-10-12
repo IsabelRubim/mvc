@@ -1,4 +1,4 @@
-# 🧮 MVC
+# MVC
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
 Simples GitHub App em JavaScript
